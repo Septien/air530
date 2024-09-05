@@ -6,6 +6,8 @@ RIOTBASE ?= ../RIOT
 DEVHELP ?= 1
 DEVELHELP ?= 1
 
+INCLUDES += -I$(CURDIR)/include
+
 FEATURE_REQUIRED += periph_uart
 
 USEMODULE += tsrb
