@@ -1,0 +1,1 @@
+A driver for the AIR530 gps module, for use with RIOT OS
