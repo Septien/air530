@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdint.h>
 
-#include "test.h"
+#include "tests.h"
 #include "cUnit.h"
 
 struct data {
@@ -19,10 +20,7 @@ void teardown(void *arg) {
 
 void tests(void)
 {
-    cUnit_t *cUnit;
-    struct data *_data;
-
-    cunit_init(&cUnit, setup, teardown, (void *)_data);
+    printf("Testing Air530 module.\n");
 
     return;
 }

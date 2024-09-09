@@ -1,4 +1,4 @@
-APPLICATION = ts_ring
+APPLICATION = gps_air530
 
 BOARD ?= native
 
@@ -8,10 +8,17 @@ DEVELHELP ?= 1
 
 INCLUDES += -I$(CURDIR)/include
 
+ifdef TEST
+	CFLAGS += -DTESTS
+	INCLUDES += -I$(CURDIR)/tests/include
+	USEMODULE += tests
+	EXTERNAL_MODULE_DIRS += $(CURDIR)
+endif
+
 FEATURE_REQUIRED += periph_uart
 
 USEMODULE += tsrb
-USEMODULE += ztimer
-USEMODULE += ztimer_msec
+#USEMODULE += ztimer
+#USEMODULE += ztimer_msec
 
 include $(RIOTBASE)/Makefile.include

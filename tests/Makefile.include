@@ -1,1 +1,1 @@
-USEMODULE_INCLUDES += $(LAST_MAKEFILEDIR)/include
+INCLUDEs += $(CURDIR)/include

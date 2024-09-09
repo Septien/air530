@@ -13,6 +13,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 #ifndef FUNCTION_NAME_SIZE
 #define FUNCTION_NAME_SIZE  80
@@ -33,8 +34,8 @@ typedef struct
     void    *data;
     Test_t  *head;
     Test_t  *last;
-    uint    tests_passed;
-    uint    tests_failed;
+    uint8_t tests_passed;
+    uint8_t tests_failed;
 }cUnit_t;
 
 /**
