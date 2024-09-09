@@ -2,8 +2,8 @@
  * @brief
  */
 
-#ifndef AIR350_H
-#define AIR350_H
+#ifndef AIR530_H
+#define AIR530_H
 
 #include "board.h"
 #include "periph/uart.h"
@@ -32,9 +32,11 @@ typedef enum {
     MODE_GPS_MULTI
 }GPS_MODE;
 
-static char     cmd[CMD_SIZE];
+/*static char     cmd[CMD_SIZE];
 static uint8_t  buffer[BUFF_SIZE];
 static tsrb_t   _tsrb = TSRB_INIT(buffer);
-static uart_t   _uart;
+static uart_t   _uart;*/
 
-#endif // AIR350_H
+void init_air530(uart_t dev, uint32_t bauds);
+
+#endif // AIR530_H
