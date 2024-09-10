@@ -32,11 +32,13 @@ typedef enum {
     MODE_GPS_MULTI
 }GPS_MODE;
 
-/*static char     cmd[CMD_SIZE];
+static char     cmd[CMD_SIZE];
+static uint8_t  last;
 static uint8_t  buffer[BUFF_SIZE];
 static tsrb_t   _tsrb = TSRB_INIT(buffer);
-static uart_t   _uart;*/
+static uart_t   _uart;
 
 void init_air530(uart_t dev, uint32_t bauds);
+uint8_t checksum(char *str);
 
 #endif // AIR530_H
