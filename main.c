@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "air350.h"
+#include "air530.h"
 
 #ifdef TESTS
 #include "tests.h"

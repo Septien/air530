@@ -2,7 +2,7 @@ APPLICATION = gps_air530
 
 BOARD ?= native
 
-RIOTBASE ?= ../RIOT
+RIOTBASE ?= ../../RTOS/RIOT
 DEVHELP ?= 1
 DEVELHELP ?= 1
 
@@ -18,7 +18,13 @@ endif
 FEATURE_REQUIRED += periph_uart
 
 USEMODULE += tsrb
-#USEMODULE += ztimer
-#USEMODULE += ztimer_msec
+USEMODULE += ztimer
+USEMODULE += ztimer_msec
+ifneq ($(BOARD), native)
+	USEMODULE += stdio_uart
+	USEMODULE += printf_float
+endif
+
+CFLAGS += -Wno-error=unused-variable
 
 include $(RIOTBASE)/Makefile.include
